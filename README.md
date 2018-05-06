@@ -10,3 +10,8 @@ To debug server code in chrome
 
 Note: dist folder will be created automatically when you build. Do not make code changes inside dist folder.
 
+steps to connect to mysql:
+1) opne your command prompt or terminal
+2) mysql -u admin -p --host sl-us-south-1-portal.22.dblayer.com --port 39849 --ssl-ca={project_path}\server\cert\ssl.crt
+3) it should ask you password enter below password
+          YUNVSJBQKEHIOIQJ
