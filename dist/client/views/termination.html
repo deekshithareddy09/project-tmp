@@ -32,20 +32,43 @@
         <div class="col-md-9">
           <div class="col-md-8 " style="padding-bottom: 25px;">
             <h1 class="text-center" >Termination of Agreement</h1></br></br>
-            <form class="bootstrap-form-with-validation">
+            <form class="bootstrap-form-with-validation" onsubmit="return false;">
             <h2 class="text-center"></h2>
             <div class="form-group"><label for="text-input" >How many days prior to lease termination must the tenant be informed?</label><input class="form-control" type="text" name="text-input" id="text-input"></div>
             <div class="form-group"><label for="text-input">Reason for termination</label>
-              <select class="form-control" id="terminate_reason">
-              	<option>Early termination</option>
-              	<option>Delay in rent payment</option>
-                <option>Criminal activity</option>
-                <option>Other</option>
+              <select class="form-control" id="termination_reason">
+              	<option value = "Early termination">Early termination</option>
+              	<option value = "Delay in rent payment">Delay in rent payment</option>
+                <option value = "Criminal activity">Criminal activity</option>
+                <option value = "Normal termination">Normal Termination</option>
               </select>
             </div>
             <div class="form-group"><label for="textarea-input">Description</label><textarea class="form-control" name="textarea" id="textarea-input"></textarea></div>
             
-            <div class="form-group" style="float:right;"><button class="btn btn-primary" type="submit">Submit</button></div>
+            <div class="form-group" style="float:right;"><button id="terminationSubmit" class="btn btn-primary" data-toggle="modal" data-target="#myModal" type="submit">Submit</button></div>
+             <!--  <button id="maintenanceSubmit"  type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="float:right;">Submit</button> -->
+             <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+
+          <!-- Modal -->
+          <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">The additional cost processing</h4>
+                </div>
+                <div class="modal-body">
+                  <p>The additional rent to be paid for <span id="type"></span> is  $<span id="fine"></span></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
           </form>
 
         </div>
@@ -90,3 +113,4 @@
       </div>
     </footer>
   </div>
+  <script type="text/javascript" src="../assets/js/termination.js"></script>>

@@ -18,7 +18,8 @@ exports.db_options = {
 
 exports.db_tables = {
 	USERS : 'rental_users',
-    RENTAL_MAINTENANCE: 'rental_maintenance'
+    RENTAL_MAINTENANCE: 'rental_maintenance',
+    RENTAL_LEASEDETAILS: 'rental_leaseDetails'
 };
 
 exports.maintenance_cost  = {

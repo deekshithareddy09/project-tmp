@@ -10,7 +10,7 @@ $("#maintenanceSubmit").click(function(){
 	    },
 	    function(data, status){
 	    	console.log(data);
-	    	var cost;
+	    	/*var cost;
 	    	if(Array.isArray(data)) {
 	    		cost = data[0].cost;
 	    	} else {
@@ -20,7 +20,7 @@ $("#maintenanceSubmit").click(function(){
 	    	if(!cost) {
 	    		cost = 100;
 	    	}
-	    	$('#cost').text(cost);
+	    	$('#cost').text(cost);*/
 	    	// $('#invalidLogin').hide();
 	     //    window.location.href = "/dashboard.html"
 	    }).fail(function(response) {

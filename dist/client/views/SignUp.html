@@ -9,7 +9,7 @@
                         <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Dropdown </a>
                             <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
                         </li>
-                    </ul><span class="navbar-text actions"> <a href="login.html" class="login">Log In</a><a class="btn btn-light action-button" role="button" href="#">Sign Up</a></span></div>
+                    </ul><span class="navbar-text actions"> <a href="#login" class="login">Log In</a><a class="btn btn-light action-button" role="button" href="#">Sign Up</a></span></div>
     </div>
     </nav>
     </div>
@@ -17,8 +17,6 @@
         <div class="form-container">
             <div class="image-holder"></div>
             <form method="post" onsubmit="return false;">
-                <span id="regFail" class="text-danger">Invalid Registration</span>
-                <span id="regSuccess" class="text-success">Successful Registration</span>
                 <h2 class="text-center"><strong>Create</strong> an account.</h2>
                 <div class="form-group"><input id="regEmail" class="form-control" type="email" name="email" placeholder="Email"></div>
                 <div class="form-group"><input id="regPwd" class="form-control" type="password" name="password" placeholder="Password"></div>
@@ -26,7 +24,33 @@
                 <div class="form-group">
                     <div class="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox">I agree to the license terms.</label></div>
                 </div>
-                <div class="form-group"><button id="regBtn" class="btn btn-primary btn-block" type="submit">Sign Up</button></div><a href="#" class="already">You already have an account? Login here.</a></form>
+                <div class="form-group"><button id="regBtn" class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal" type="submit">Sign Up</button></div><a href="#" class="already">You already have an account? Login here.</a></form>
+               <!--    <div class="form-group" style="float:right;"><button id="terminationSubmit" class="btn btn-primary" data-toggle="modal" data-target="#myModal" type="submit">Submit</button></div> -->
+             <!--  <button id="maintenanceSubmit"  type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="float:right;">Submit</button> -->
+             <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+
+          <!-- Modal -->
+          <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Sign up Status</h4>
+                </div>
+                <div class="modal-body">
+                <span id="regFail" class="text-danger">Invalid Registration</span>
+                <span id="regSuccess" class="text-success">Successful Registration</span>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" id="signupClose" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
         </div>
     </div>
     <div class="article-list"></div>
